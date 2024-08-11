@@ -13,7 +13,7 @@ body{
 .informacoes{
   display: none;
 }
-.informacoes ativa{
+.informacoes.ativa{
   display: block;
 }
 .conteudo{
@@ -33,7 +33,7 @@ body{
   font-family: "GOT";
   src: url(../fontes/GOT.ttf);
 }
-.informacoes descricao{
+.informacoes .descricao{
   width: 49%;
   font-size: 24px;
   color: #ffffff;
@@ -77,13 +77,13 @@ body{
     opacity: 1;
   }
 }
-main:after{/*Um pseudo elemento que serve para criar elementos do HTML direto aqui no CSS e poder estilizar daqui mesmo.*/
+main::after {
   content: "";
-  min-height: 100vh;
-  width: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(120deg, rgb(0,0,0,1) 10%, rgb(0,0,0,0.05926120448179271) 50%, rgb(0,0,0,1) 90% ) ;
   z-index: -1;
 }
